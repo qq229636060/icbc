@@ -21,15 +21,15 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 axios.defaults.headers.get['Content-Type'] = 'application/x-www-form-urlencoded';
 // axios.defaults.headers.common['clientid'] = 'testclient';
 axios.defaults.transformRequest = [function (data) {
-    let ret = ''
-    for (let it in data) {
+    var ret = ''
+    for (var it in data) {
       ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
     }
     return ret
 }]
 axios.interceptors.request.use(
       config => {
-        let token = localStorage.getItem("token");
+        var token = localStorage.getItem("token");
         if (token) {  // 判断是否存在token，如果存在的话，则每个http header都加上token
           config.headers.token = token;
         }

@@ -73,11 +73,13 @@
 		 			this.index =3
 		 			this.txt = "服务"
 		 		}else if(e == 4){
-
 		 			if(sessionStorage.getItem("bank")){
 		 				sessionStorage.removeItem("bank")
 		 			}
-		 			this.getuse()
+		 			if(localStorage.getItem("token") && localStorage.getItem("token") != ""){
+		 				this.getuse()
+		 			}
+		 			
 		 			this.img = require('../assets/img/indexbg3.jpg')
 		 			this.navimg = require('../assets/img/nav3.jpg')
 		 			this.index =4

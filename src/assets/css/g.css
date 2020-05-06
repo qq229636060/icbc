@@ -382,10 +382,11 @@ input[type="password"] {
     font-size: 0.28rem; }
     .logintop{ margin-top: 0.85rem; width: 100%; }
     .logintop img{ width: 100%; }
+    .inputbox input{border:none;}
 	.inputbox{  display: flex; display: -webkit-flex; padding:0.2rem 0.3rem; border-bottom: solid 1px #eee; align-items: center;  width: 7rem; margin:0 auto;   }
 	.inputbox em{ font-style: normal; margin-right: 0.5rem }
 .btnlogin{ width: 7rem; height: 1rem; background: #5384ed; color: #fff; text-align: center; line-height: 1rem;font-size: .26rem; margin:0.8rem auto}
-.outlogin{ width: 100%; height: 1.03rem; position: absolute; bottom: 1.8rem}
+.outlogin{ width: 100%; height: 1.03rem; position: absolute; bottom: -1.3rem}
 .outlogin img{ width: 100%; height: 100% }
 .useinfos{ width: 2rem; height: 1rem; color: #fff; position:absolute; left: 2rem;top: 0.9rem;  }
 .useinfos p:first-child{ font-size: 0.32rem; }

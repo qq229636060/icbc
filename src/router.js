@@ -16,22 +16,22 @@ export default new Router({
       component:resolve => require(['./views/index.vue'], resolve)
     },
     {
-      path: '//bank',
+      path: '/bank/',
       name: 'Bank',
       component:resolve => require(['./views/bank.vue'], resolve)
     },
     {
-      path: '//sblist',
+      path: '/sblist/',
       name: 'Sblist',
       component:resolve => require(['./views/sblist.vue'], resolve)
     },
     {
-      path: '///login',
+      path: '/login//',
       name: 'Login',
       component:resolve => require(['./views/login.vue'], resolve)
     },
     {
-      path: '///info',
+      path: '/info//',
       name: 'Info',
       component:resolve => require(['./views/info.vue'], resolve)
     }
