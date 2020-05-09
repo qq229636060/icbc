@@ -45,9 +45,13 @@
 			  	  	 		<div class="rowbox_l">汇缴地主管税务机关：</div>
 			  	  	 		<div class="rowbox_r">{{infodata.government}}</div>
 			  	  	 	</div>
-			  	  	 	<div class="rowbox">
+			  	  	 	<div class="rowbox" v-if="infodata.company != ''">
 			  	  	 		<div class="rowbox_l">任职受雇单位：</div>
 			  	  	 		<div class="rowbox_r">{{infodata.company}}</div>
+			  	  	 	</div>
+						<div class="rowbox" v-else>
+			  	  	 		<div class="rowbox_l">户籍所在地：</div>
+			  	  	 		<div class="rowbox_r">{{infodata.domicile}}</div>
 			  	  	 	</div>
 			  	  	 </div>
 			  	  	 <div class="fbox">
@@ -113,6 +117,7 @@
 	</div>	
 </template>
 <script type="text/javascript">
+
 	import $ from 'jquery';
 	import Swiper from 'swiper';
 	import { Dialog,Toast } from 'vant';

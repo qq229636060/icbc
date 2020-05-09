@@ -304,7 +304,7 @@ input[type="password"] {
  overflow-x: hidden;
 }
 .slide-left-enter, .slide-right-leave-active {
- opacity: ;
+ opacity: 0;
  -webkit-transform: translate(100%, 0);
  transform: translate(100%, 0);
 }
@@ -319,7 +319,8 @@ input[type="password"] {
 .nav img{ width: 100%; height: 1.03rem;position: absolute;top:0;left: 0; z-index: -9 }
 .navbox{ width: 25%; display: block; height: 100% }
 .topfix{ width: 100%;height: .88rem; background:url(../img/topfix.jpg) no-repeat 0 0; background-size: 100%; top:0; position: fixed; text-align: center; font-size: .28rem; line-height: .88rem; color: #fff }
-.gotobank{     width: 100%;height: .8rem;position: absolute;top: 5.2rem; }
+.gotobank{     width: 100%;height: .8rem;position: absolute;top: 5.4rem; }
+.useinfo_gongsi {width: 100%;height: .8rem;position: absolute;top: 3.5rem;}
 .banktopfix{ width: 100%; height: .93rem; background:url(../img/banktop.jpg) no-repeat 0 0; background-size: 100%; position: fixed; top:0;}
 .bottonnav{width: 100%; height: 1.36rem; background:url(../img/bottom_btn.jpg) no-repeat 0 0; background-size: 100%; position: fixed; bottom:0;}
 #bank{ background: #f5f6fa }
@@ -340,7 +341,14 @@ input[type="password"] {
     height: 1.5rem;
     position: absolute;
     left: 2.2rem;
-    top: 6rem; }
+	top: 6rem; }
+	.gotonext11{
+		height: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 10.5rem;
+    width: 7rem;
+	}
 .sbtop{
 	width: 100%; height: .93rem; background:url(../img/top1.jpg) no-repeat 0 0; background-size: 100%; position: fixed; top:0; z-index: 999
 }
@@ -350,12 +358,16 @@ input[type="password"] {
 .sbtop2{
 	width: 100%; height: .93rem; background:url(../img/top3.jpg) no-repeat 0 0; background-size: 100%; position: fixed; top:0; z-index: 999
 }
+.sbtop3{
+	width: 100%; height: .93rem; background:url(../img/top4.jpg) no-repeat 0 0; background-size: 100%; position: fixed; top:0; z-index: 999
+}
+.h93{ height: .93rem;}
+#gs{ background-color: #f5f6fa;}
 .h100{height:.89rem}
 .van-tab--active{font-weight: normal;}
 .bigbox img{ width: 100%; }
 .bigbox{ width: 100%; height: 100%; background: #f5f6fa }
 .nonebox{ width: 2.88rem;  height: 3.67rem; background: url(../img/none.jpg) no-repeat 0 0; background-size:100%; margin:35% auto;}
-.box_year{  }
 .box_year h2{font-size: .26rem; color: #313445; padding:.25rem .35rem;}
 .infoboxz{ background: #fff; padding:.25rem .35rem; width: 100%; box-sizing: border-box; position: relative;}
 .infoboxz i{ width: 0.12rem; height: 0.18rem; background: url(../img/jt.jpg) no-repeat 0 0 ; background-size:100%;  position: absolute; right: 0.35rem; top:0.7rem; display: block; }
@@ -395,7 +407,8 @@ input[type="password"] {
 
 
 
+.gs_box{ width: 6.9rem; background-color: #fff; border-radius: 0.2rem; margin: 0.2rem auto 0 auto; padding: 0.4rem; box-sizing: border-box;}  
+.gs_box p:first-child{ font-size: .36rem; color: #000; margin-top: 0;}
+.gs_box P{ font-size: 0.32rem; color: #9099a2; margin-top: 0.2rem; margin-bottom: 0;}
 
-
-
-
+.indextip{ width: 100%; height: 1rem; background: url(../img/indextip.png) no-repeat 0 0; background-size:100% 1rem; position:fixed; top:0; z-index: 999;}

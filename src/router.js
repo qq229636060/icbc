@@ -4,6 +4,7 @@ import Index from './views/index.vue'
 import Bank from './views/bank.vue'
 import Sblist from './views/sblist.vue'
 import Info from './views/info.vue'
+import Gs from './views/gs.vue'
 import Login from './views/login.vue'
 Vue.use(Router) 
 export default new Router({
@@ -16,12 +17,12 @@ export default new Router({
       component:resolve => require(['./views/index.vue'], resolve)
     },
     {
-      path: '/bank/',
+      path: '/bank//',
       name: 'Bank',
       component:resolve => require(['./views/bank.vue'], resolve)
     },
     {
-      path: '/sblist/',
+      path: '/sblist//',
       name: 'Sblist',
       component:resolve => require(['./views/sblist.vue'], resolve)
     },
@@ -31,9 +32,14 @@ export default new Router({
       component:resolve => require(['./views/login.vue'], resolve)
     },
     {
-      path: '/info//',
+      path: '/info///',
       name: 'Info',
       component:resolve => require(['./views/info.vue'], resolve)
+    },
+    {
+      path: '/gs///',
+      name: 'Gs',
+      component:resolve => require(['./views/gs.vue'], resolve)
     }
   ]
 })

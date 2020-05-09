@@ -17,6 +17,7 @@
 	</div>	
 </template>
 <script type="text/javascript">
+
 	import $ from 'jquery';
 	import Swiper from 'swiper';
 	import { Dialog,Toast } from 'vant';

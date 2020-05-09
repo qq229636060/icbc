@@ -1,11 +1,14 @@
 <template>
 	<div class="main" id="indexbox">
+		<!-- <div class="indextip" v-if="index == 1"></div> -->
 	    <div class="topfix" v-if="index == 2 || index == 3">{{txt}}</div>
 	    <div class="gotonext1" v-if="index == 2" @click="gotosblist"></div>
 	    <div class="gotobank" v-if="index==4" @click="gotobank"></div>
 	    <div class="gotonext" v-if="index==1" @click="goto(2)"></div>
+		<div class="gotonext11" v-if="index==1" @click="goto(2)"></div>
 	    <div class="gotologin" v-if="index==4 && islogin == false" @click="login">登录/注册</div>
 	    <div class="useinfos" v-if="index==4 && islogin == true"><p>{{usename}}</p><p>{{mobile}}</p></div>
+		 <div class="useinfo_gongsi" v-if="index==4 && islogin == true" @click="gotogs"></div>
 	    <div class="outlogin"  v-if="index==4 && islogin == true" @click="outlogin"><img src="../assets/img/outlogin.jpg"/></div>
 		<img :src="img" class="indexbg"/>
 		<div class="nav">
@@ -15,6 +18,7 @@
 			<a class="navbox" @click="goto(3)"></a>
 			<a class="navbox" @click="goto(4)"></a>
 		</div>
+		
 	</div>	
 </template>
 <script type="text/javascript">
@@ -33,10 +37,20 @@
 				usename:"",
 				mobile:"",
 				card:"",
-				bank:""
+				bank:"",
+				indexmsg:0
 			}
 		},
 		 methods: {
+			gotogs(){
+				if(localStorage.getItem("token")){
+		 			this.$router.push({name:'Gs',params:{}})
+		 		}else{
+		 			this.$router.push({name:'Login',query:{
+	                    redirect:this.$router.history.current.fullPath
+	                },params:{}})
+		 		}
+			},
 		 	gotobank(e){
 		 		if(localStorage.getItem("token")){
 		 			this.$router.push({name:'Bank',params:{}})
@@ -59,8 +73,14 @@
 		 	},
 		 	goto(e){
 		 		if(e == 1){
-		 			this.img = require('../assets/img/indexbg.jpg')
-		 			this.navimg = require('../assets/img/nav.jpg')
+					if(this.indexmsg == 0){
+						this.img = require('../assets/img/indexbg.jpg')	
+					}else if(this.indexmsg == 1){
+						this.img = require('../assets/img/indexbg_m1.jpg')	
+					}else if(this.indexmsg == 2){
+						this.img = require('../assets/img/indexbg_m2.jpg')	
+					}
+		 				this.navimg = require('../assets/img/nav.jpg')
 		 			this.index =1
 		 		}else if(e == 2){
 		 			this.img = require('../assets/img/indexbg1.jpg')
@@ -92,6 +112,10 @@
 					}).then((res) => {
 						console.log(res)
 						if(res.data.code == 0){
+							if(res.data.data.sex == 2){
+								this.img = require('../assets/img/indexbg4.jpg')
+							}
+							this.indexmsg = res.data.data.notify
 							this.islogin = true
 							this.usename = res.data.data.name
 							this.mobile = res.data.data.mobile
@@ -105,9 +129,16 @@
 		 	outlogin(){
 		 		this.islogin = false
 		 		localStorage.setItem("token","")
-		 	}
+			 },
+			 handleScroll(){
+					let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop // 滚动条偏移量
+				    console.log(scrollTop)
+					//this.isFixed = scrollTop > offsetTop ? true : false;  // 如果滚动到顶部了，this.isFixed就为true
+				}
 		 },
 		mounted:function(){
+			var _this = this
+				window.addEventListener('scroll',this.handleScroll,true)
 			if(localStorage.getItem("token")){
 				this.islogin = true
 			}

@@ -16,7 +16,12 @@ if(env == "production"){
 }else{
   axios.defaults.baseURL ='http://150.242.98.114/';
 }
-
+document.addEventListener('plusready',function(){  
+  setStatusbarRed();  
+},false);  
+function setStatusbarRed(){
+  plus.navigator.setStatusBarBackground("#000000");
+  }
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 axios.defaults.headers.get['Content-Type'] = 'application/x-www-form-urlencoded';
 // axios.defaults.headers.common['clientid'] = 'testclient';
