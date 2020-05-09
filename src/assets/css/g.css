@@ -384,10 +384,10 @@ input[type="password"] {
 .tt,.tt img{ width: 100%;  height:.95rem;  }
 .fbox{ margin-top: 0.2rem;background: #fff}
 .rowbox { display: flex; display: -webkit-flex; justify-content: space-between;  box-sizing: border-box;  padding:0.25rem;}
-.rowbox_r{ color: #333; margin-right: 0.25rem; font-size: 0.3rem; text-align: right; width: 3.5rem;}
+.rowbox_r{ color: #333; margin-right: 0.25rem; font-size: 0.32rem; text-align: right; width: 3.5rem;}
 .w350z{ width: 3.5rem;}
-.rhui .rowbox_l{ color: #a1a4ab; font-size: .3rem; }
-.rowbox_l{font-size: .3rem; color: #000;}
+.rhui .rowbox_l{ color: #a1a4ab; font-size: .32rem; }
+.rowbox_l{font-size: .32rem; color: #000;}
 .fixs{ position: fixed; top:.93rem; width:100%; z-index: 99 }
 #info .van-tabs__wrap{ position: fixed; top:.89rem; width: 100%; z-index: 999; }
 .h22{ height: .2rem; background: #f5f6fa;  }

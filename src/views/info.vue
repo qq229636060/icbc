@@ -58,7 +58,7 @@
 			  	  	 	<div class="tt"><img src="../assets/img/info1.jpg"></div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">收入合计：</div>
-			  	  	 		<div class="rowbox_r">{{infodata.user_income_fee}}元</div>
+			  	  	 		<div class="rowbox_r sp"><div class="w350z">{{infodata.user_income_fee}}元</div><i></i></div>
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">费用合计：</div>
@@ -66,7 +66,7 @@
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">免税收入：</div>
-			  	  	 		<div class="rowbox_r sp"><div class="w350z">{{infodata.user_free_fee}}元</div><em></em></div>
+			  	  	 		<div class="rowbox_r sp"><div class="w350z" style="color:#000">{{infodata.user_free_fee}}元</div><em></em></div>
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">减除费用：</div>
@@ -82,7 +82,7 @@
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">其他扣除合计：</div>
-			  	  	 		<div class="rowbox_r">{{infodata.user_deduct_other_fee}}元</div>
+			  	  	 		<div class="rowbox_r"><div class="w350z">{{infodata.user_deduct_other_fee}}元</div><i></i></div>
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">准予扣除的捐款额：</div>
