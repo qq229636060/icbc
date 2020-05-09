@@ -14,8 +14,8 @@
 			  	 	<h2>{{b.pushed}}</h2>
 			  	 	<div class="infoboxz">
 			  	 		<p>{{b.year}}年度综合年度所得年度汇算</p>
-			  	 		<p>汇款所属期:{{b.year_s}}至{{b.year_e}}</p>
-			  	 		<p>以退税额:{{b.refund_fee}}元</p>
+			  	 		<p>汇款所属期：{{b.year_s}} 至 {{b.year_e}}</p>
+			  	 		<p>以退税额：{{b.refund_fee}}元</p>
 			  	 		<i></i>
 			  	 	</div>
 			  	 </div>

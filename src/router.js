@@ -6,6 +6,7 @@ import Sblist from './views/sblist.vue'
 import Info from './views/info.vue'
 import Gs from './views/gs.vue'
 import Login from './views/login.vue'
+import Yeaer from './views/yeaer.vue'
 Vue.use(Router) 
 export default new Router({
   mode: 'hash',
@@ -40,6 +41,11 @@ export default new Router({
       path: '/gs///',
       name: 'Gs',
       component:resolve => require(['./views/gs.vue'], resolve)
+    },
+    {
+      path: '/yeaer//',
+      name: 'Yeaer',
+      component:resolve => require(['./views/yeaer.vue'], resolve)
     }
   ]
 })

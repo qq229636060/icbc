@@ -3,14 +3,15 @@
 		<!-- <div class="indextip" v-if="index == 1"></div> -->
 	    <div class="topfix" v-if="index == 2 || index == 3">{{txt}}</div>
 	    <div class="gotonext1" v-if="index == 2" @click="gotosblist"></div>
+		<div class="gotonext2" v-if="index == 2" @click="gotoyear"></div>
 	    <div class="gotobank" v-if="index==4" @click="gotobank"></div>
 	    <div class="gotonext" v-if="index==1" @click="goto(2)"></div>
-		<div class="gotonext11" v-if="index==1" @click="goto(2)"></div>
+		<div class="gotonext11" v-if="index==1" @click="gotoyear"></div>
 	    <div class="gotologin" v-if="index==4 && islogin == false" @click="login">登录/注册</div>
 	    <div class="useinfos" v-if="index==4 && islogin == true"><p>{{usename}}</p><p>{{mobile}}</p></div>
 		 <div class="useinfo_gongsi" v-if="index==4 && islogin == true" @click="gotogs"></div>
-	    <div class="outlogin"  v-if="index==4 && islogin == true" @click="outlogin"><img src="../assets/img/outlogin.jpg"/></div>
 		<img :src="img" class="indexbg"/>
+		<div class="outlogin"  v-if="index==4 && islogin == true" @click="outlogin"><img src="../assets/img/outlogin.jpg"/></div>
 		<div class="nav">
 		    <img :src="navimg">
 			<a class="navbox" @click="goto(1)"></a>
@@ -70,7 +71,16 @@
 	                },params:{}})
 		 		}
 		 		
-		 	},
+			 },
+			gotoyear(){
+				if(localStorage.getItem("token")){
+		 			this.$router.push({name:'Yeaer',params:{}})
+		 		}else{
+		 			this.$router.push({name:'Login',query:{
+	                    redirect:this.$router.history.current.fullPath
+	                },params:{}})
+		 		}
+			},
 		 	goto(e){
 		 		if(e == 1){
 					if(this.indexmsg == 0){
@@ -138,7 +148,11 @@
 		 },
 		mounted:function(){
 			var _this = this
-				window.addEventListener('scroll',this.handleScroll,true)
+			document.addEventListener("plusready",plusReady,false); 
+			function plusReady(){
+				plus.navigator.setStatusBarBackground("#000000");
+			} 
+				// window.addEventListener('scroll',this.handleScroll,true)
 			if(localStorage.getItem("token")){
 				this.islogin = true
 			}
@@ -156,4 +170,5 @@
 		}
 
 	}
+	
 </script>

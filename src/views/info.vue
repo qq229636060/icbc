@@ -62,11 +62,11 @@
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">费用合计：</div>
-			  	  	 		<div class="rowbox_r">{{infodata.user_cost_fee}}</div>
+			  	  	 		<div class="rowbox_r">{{infodata.user_cost_fee}}元</div>
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">免税收入：</div>
-			  	  	 		<div class="rowbox_r sp">{{infodata.user_free_fee}}元<em></em></div>
+			  	  	 		<div class="rowbox_r sp"><div class="w350z">{{infodata.user_free_fee}}元</div><em></em></div>
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">减除费用：</div>
@@ -74,11 +74,11 @@
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">专项扣除合计：</div>
-			  	  	 		<div class="rowbox_r sp">{{infodata.user_deduct_fee}}元<i></i></div>
+			  	  	 		<div class="rowbox_r sp"><div class="w350z">{{infodata.user_deduct_fee}}元</div><i></i></div>
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">专项附加扣除合计：</div>
-			  	  	 		<div class="rowbox_r sp">{{infodata.user_deduct_add_fee}}元<i></i></div>
+			  	  	 		<div class="rowbox_r sp"><div class="w350z">{{infodata.user_deduct_add_fee}}元</div><i></i></div>
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">其他扣除合计：</div>
@@ -86,7 +86,7 @@
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">准予扣除的捐款额：</div>
-			  	  	 		<div class="rowbox_r sp">{{infodata.user_donation_fee}}元<i></i></div>
+			  	  	 		<div class="rowbox_r sp"><div class="w350z">{{infodata.user_donation_fee}}元</div><i></i></div>
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">应纳税所得额：</div>
@@ -98,7 +98,7 @@
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">减免税额：</div>
-			  	  	 		<div class="rowbox_r sp">{{infodata.user_reduce_fee}}元<i></i></div>
+			  	  	 		<div class="rowbox_r sp"><div class="w350z">{{infodata.user_reduce_fee}}元</div><i></i></div>
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">已缴税额：</div>
@@ -106,6 +106,8 @@
 			  	  	 	</div>
 			  	  	 </div>
 			  	  </div>
+					<div class="h110"></div>
+					<div class="fixbtnbottom">更正</div>
 			  </van-tab>
 			  <van-tab title="缴税记录">
 			  	<div class="nonetxt">暂无数据</div>
