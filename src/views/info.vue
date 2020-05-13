@@ -31,7 +31,7 @@
 			  	  	  <div class="fbox rhui">
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">税款所属年度：</div>
-			  	  	 		<div class="rowbox_r">{{infodata.year}}元</div>
+			  	  	 		<div class="rowbox_r">{{infodata.year}}</div>
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">税款所属期起：</div>
@@ -82,7 +82,7 @@
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">其他扣除合计：</div>
-			  	  	 		<div class="rowbox_r"><div class="w350z">{{infodata.user_deduct_other_fee}}元</div><i></i></div>
+			  	  	 		<div class="rowbox_r sp"><div class="w350z">{{infodata.user_deduct_other_fee}}元</div><i></i></div>
 			  	  	 	</div>
 			  	  	 	<div class="rowbox">
 			  	  	 		<div class="rowbox_l">准予扣除的捐款额：</div>
