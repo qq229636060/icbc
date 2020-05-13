@@ -418,7 +418,7 @@ input[type="password"] {
 
 .gs_box{ width: 6.9rem; background-color: #fff; border-radius: 0.2rem; margin: 0.2rem auto 0 auto; padding: 0.4rem; box-sizing: border-box;}  
 .gs_box p:first-child{ font-size: .36rem; color: #000; margin-top: 0;}
-.gs_box P{ font-size: 0.32rem; color: #9099a2; margin-top: 0.2rem; margin-bottom: 0;}
+.gs_box P{ font-size: 0.32rem; color: #9099a2; margin-top: 0.2rem; margin-bottom: 0; word-wrap:break-word;word-break:break-all; }
 
 .indextip{ width: 100%; height: 1rem; background: url(../img/indextip.png) no-repeat 0 0; background-size:100% 1rem; position:fixed; top:0; z-index: 999;}
 

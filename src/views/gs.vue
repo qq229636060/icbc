@@ -6,7 +6,7 @@
 	   <div class="h93"></div>
 	   <div class="gs_box" v-for="list in gslist">
 		   <p>{{list.name}}</p>
-		   <p>统一社会代码：{{list.code}}</p>
+		   <p style="width:6.5rem">统一社会信用代码：{{list.code}}</p>
 		   <p>职务：{{list.position == "" ? "-" : list.position}}</p>
 		   <p>任职受雇日期：{{list.start == "" ? "-" : list.start}} </p>
 		   <p>离职日期：{{list.end == "" ? "-" : list.end}} </p>
