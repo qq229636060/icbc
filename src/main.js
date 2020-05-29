@@ -6,15 +6,16 @@ import axios from 'axios'
 import $ from 'jquery';
 import Vant from 'vant';
 import 'vant/lib/index.css';
+import 'swiper/dist/css/swiper.css';
 import './assets/css/g.css'
 import Swiper from 'swiper'
 Vue.use(Vant);
 import { Dialog,Toast } from 'vant';
 var env = process.env.NODE_ENV;
 if(env == "production"){
-  axios.defaults.baseURL ='http://150.242.98.114/';
+  axios.defaults.baseURL ='http://150.242.98.114:8080/';
 }else{
-  axios.defaults.baseURL ='http://150.242.98.114/';
+  axios.defaults.baseURL ='http://150.242.98.114:8080/';
 }
 document.addEventListener('plusready',function(){  
   setStatusbarRed();  

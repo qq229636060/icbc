@@ -314,118 +314,22 @@ input[type="password"] {
  -webkit-transform: translate(-100%, 0);
  transform: translate(-100%, 0);
 }
+#indexbox{padding-bottom: 1rem;}
+#indexbox img{ width: 100%;}
+.indextop{position: fixed; top:0}
+.indextop img{ width: 100%;}
+.foot{ width: 100%; height:.99rem ; position:fixed; bottom: 0; z-index: 999; background: url(../img/foot.jpg) no-repeat 0 0 #fff; background-size:100%;}
+.foot1{ width: 100%; height:.99rem ; position:fixed; bottom: 0; z-index: 999; background: url(../img/foot1.jpg) no-repeat 0 0 #fff; background-size:100%;}
+.weather{position: absolute; left: 1.2rem; top:0.8rem}
+.weather p{ margin-bottom: 0; color: #5c5c5c; font-size: .2rem;}
+.weather p:last-child{font-size: .18rem;}
+.gotouse{ width: 1.5rem; height: 1rem; position: absolute; top:0; right: 0;}
+.gotoindex{width: 1.5rem; height: 1rem; position: absolute; top:0; left: 0;}
+.inbox{position: relative;}
+.index_txt{font-size: .38rem; position: absolute; top:.18rem; left: .4rem;}
+.loginimg{ width: 100%;}
+input{ border: none;}
+.topinput1{ position: absolute; top:4rem; left: 1rem;}
+.topinput2{ position: absolute; top:4.8rem; left: 1rem;}
+.btnlogin{width: 6.9rem; height: 0.7rem; line-height: 0.7rem; text-align: center; background-color: #ed8481; color: #fff; position: absolute; top:5.7rem; left: 50%; margin-left: -3.45rem; border-radius: 0.08rem;}
 
-.indexbg{ width:7.5rem; }
-.nav{ position: relative; position: fixed; bottom: 0; height: 1.03rem; width: 7.5rem; display: flex; display: -webkit-flex;}
-.nav img{ width: 100%; height: 1.03rem;position: absolute;top:0;left: 0; z-index: -9 }
-.navbox{ width: 25%; display: block; height: 100% }
-.topfix{ width: 100%;height: .88rem; background:url(../img/topfix.jpg) no-repeat 0 0; background-size: 100%; top:0; position: fixed; text-align: center; font-size: .28rem; line-height: .88rem; color: #fff }
-.gotobank{     width: 100%;height: .8rem;position: absolute;top: 5.4rem; }
-.useinfo_gongsi {width: 100%;height: .8rem;position: absolute;top: 3.5rem;}
-.banktopfix{ width: 100%; height: .93rem; background:url(../img/banktop.jpg) no-repeat 0 0; background-size: 100%; position: fixed; top:0;}
-.bottonnav{width: 100%; height: 1.36rem; background:url(../img/bottom_btn.jpg) no-repeat 0 0; background-size: 100%; position: fixed; bottom:0;}
-#bank{ background: #f5f6fa }
-.bankbox{ width: 6.88rem; height: 2.12rem; background: #fff; border-radius: 0.3rem; margin:1.2rem auto 0.2rem auto; box-sizing: border-box; padding:0.4rem; display: flex; }
-.logos{ width: 1rem; height: 1rem; border-radius: 50% }
-.info { margin-left: 0.55rem; }
-.info p { font-size: .32rem; color: #333 }
-.info .f28{ font-size: .28rem; }
-.info .f26{ font-size: .26rem; color: #31af70}
-.info .f26 i{ width: .26rem; height: .26rem; background: url(../img/wenhao.jpg) no-repeat 0 0; background-size: 100%; display: inline-block; margin-left: 0.1rem; }
-.retrun { width: 1.5rem; height: .93rem; position: absolute; left: 0; top:0; }
-.gotonext{    width: 2rem;
-    height: 1.5rem;
-    position: absolute;
-    left: 0.5rem;
-    top: 4rem; }
-.gotonext1{ width: 2rem;
-    height: 2rem;
-    position: absolute;
-    left: 2.2rem;
-	top: 6rem; }
-	.gotonext2{ width: 2rem;
-		height: 2rem;
-		position: absolute;
-		left: 0.1rem;
-		top: 6rem; }
-	.gotonext11{
-		height: 1.5rem;
-    position: absolute;
-    left: 0;
-    top: 10.5rem;
-    width: 7rem;
-	}
-.sbtop{
-	width: 100%; height: .93rem; background:url(../img/top1.jpg) no-repeat 0 0; background-size: 100%; position: fixed; top:0; z-index: 999
-}
-.sbtop1{
-	width: 100%; height: .93rem; background:url(../img/top2.jpg) no-repeat 0 0; background-size: 100%; position: fixed; top:0; z-index: 999
-}
-.sbtop2{
-	width: 100%; height: .93rem; background:url(../img/top3.jpg) no-repeat 0 0; background-size: 100%; position: fixed; top:0; z-index: 999
-}
-.sbtop3{
-	width: 100%; height: .93rem; background:url(../img/top4.jpg) no-repeat 0 0; background-size: 100%; position: fixed; top:0; z-index: 999
-}
-.h93{ height: .93rem;}
-#gs{ background-color: #f5f6fa;}
-.h100{height:.89rem}
-.van-tab--active{font-weight: normal;}
-.bigbox img{ width: 100%; }
-.bigbox{ width: 100%; height: 100%; background: #f5f6fa }
-.nonebox{ width: 2.88rem;  height: 3.67rem; background: url(../img/none.jpg) no-repeat 0 0; background-size:100%; margin:35% auto;}
-.box_year h2{font-size: .28rem; color: #313445; padding:.25rem .35rem;}
-.infoboxz{ background: #fff; padding:.25rem .35rem; width: 100%; box-sizing: border-box; position: relative;}
-.infoboxz i{ width: 0.12rem; height: 0.18rem; background: url(../img/jt.jpg) no-repeat 0 0 ; background-size:100%;  position: absolute; right: 0.35rem; top:0.7rem; display: block; }
-.infoboxz p:first-child{ color: #333; font-size: 0.32rem }
-.infoboxz p{color: #bbbfc9; margin-bottom: 0.05rem; font-size: 0.3rem;}
-.nonetxt {text-align: center; font-size: 0.28rem; display: flex; align-items: center; width: 100%; height: 100% ; margin-top: 40%; justify-content: center; color: #333}
-.formbox{ background: #f5f6fa; }
-.tt,.tt img{ width: 100%;  height:.95rem;  }
-.fbox{ margin-top: 0.2rem;background: #fff}
-.rowbox { display: flex; display: -webkit-flex; justify-content: space-between;  box-sizing: border-box;  padding:0.25rem;}
-.rowbox_r{ color: #333; margin-right: 0.25rem; font-size: 0.32rem; text-align: right; width: 3.5rem;}
-.w350z{ width: 3.5rem;}
-.rhui .rowbox_l{ color: #a1a4ab; font-size: .32rem; }
-.rowbox_l{font-size: .32rem; color: #000;}
-.fixs{ position: fixed; top:.93rem; width:100%; z-index: 99 }
-#info .van-tabs__wrap{ position: fixed; top:.89rem; width: 100%; z-index: 999; }
-.h22{ height: .2rem; background: #f5f6fa;  }
-.sp {display: flex; display: -webkit-flex; align-items: center; position: relative; color: #969696}
-.sp i{ width: 0.12rem; height: 0.18rem; background: url(../img/jt.jpg) no-repeat 0 0 ; background-size:100%;  display: block;  position: absolute; top: 0.15rem;right: -0.2rem;}
-.sp em{ width: .23rem; height: 0.12rem; background: url(../img/jt2.jpg) no-repeat 0 0; background-size:100%; display: block;  position: absolute; top: 0.2rem;right: -0.25rem;   }
-
-.gotologin{position: absolute;
-    top: 1.2rem;
-    left: 2rem;
-    color: #fff;
-    font-size: 0.28rem; }
-    .logintop{ margin-top: 0.85rem; width: 100%; }
-    .logintop img{ width: 100%; }
-    .inputbox input{border:none;}
-	.inputbox{  display: flex; display: -webkit-flex; padding:0.2rem 0.3rem; border-bottom: solid 1px #eee; align-items: center;  width: 7rem; margin:0 auto;   }
-	.inputbox em{ font-style: normal; margin-right: 0.5rem }
-.btnlogin{ width: 7rem; height: 1rem; background: #5384ed; color: #fff; text-align: center; line-height: 1rem;font-size: .26rem; margin:0.8rem auto}
-.outlogin{ width: 100%; height: 1.03rem; position: absolute;bottom: 0.2rem;}
-.outlogin img{ width: 100%; height: 100% }
-.useinfos{ width: 2rem; height: 1rem; color: #fff; position:absolute; left: 2rem;top: 0.9rem;  }
-.useinfos p:first-child{ font-size: 0.32rem; }
-.useinfos p{color: #fff; font-size: .28rem}
-.icons{ width: 2rem;position: absolute;top: 0.8rem;
-    right: 0.4rem; }
-
-
-
-.gs_box{ width: 6.9rem; background-color: #fff; border-radius: 0.2rem; margin: 0.2rem auto 0 auto; padding: 0.4rem; box-sizing: border-box;}  
-.gs_box p:first-child{ font-size: .36rem; color: #000; margin-top: 0;}
-.gs_box P{ font-size: 0.32rem; color: #9099a2; margin-top: 0.2rem; margin-bottom: 0; word-wrap:break-word;word-break:break-all; }
-
-.indextip{ width: 100%; height: 1rem; background: url(../img/indextip.png) no-repeat 0 0; background-size:100% 1rem; position:fixed; top:0; z-index: 999;}
-
-#yeaer{height: 100%; overflow:hidden;}
-.w487{ width: 4.87rem; font-size: .28rem; color: #000; text-align: center;margin: 0.2rem auto 0.5rem auto;}
-.van-dialog__header{ color: #000; font-weight: bold;}
-.fixbtnbottom{ width: 100%; height: 1.1rem; border-top:solid 1px #c7c7c9 ; position: fixed; bottom: 0; background-color: #fff; text-align: center; line-height: 1.1rem; font-size: .36rem; color: #2871ef;
-	-moz-box-shadow:0px -7px 10px #E6E6E6; -webkit-box-shadow:0px -7px 10px #E6E6E6; box-shadow:0px -7px 10px #E6E6E6;
-}
-.h110{ height: 1.1rem;}

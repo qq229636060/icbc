@@ -1,16 +1,15 @@
 <template>
 	<div class="main" id="login">
-	   <div class="sbtop2">
+	  <img src="../assets/img/login.jpg" class="loginimg"/>
+	   <!-- <div class="sbtop2">
 	   	 <div class="retrun" @click="gotoretrun"></div>
-	   </div>
-	   <div class="logintop"><img src="../assets/img/logins.jpg"></div>
-	   <div class="inputbox"><em>账号</em><input type="text" placeholder="输入手机号" v-model="input1" /></div>
-	   <div class="inputbox"><em>密码</em><input type="password" placeholder="输入密码" v-model="input2" /></div>
+	   </div> -->
+	   <div class="inputbox topinput1"><input type="text" placeholder="输入手机号" v-model="input1" /></div>
+	   <div class="inputbox topinput2"><input type="password" placeholder="输入密码" v-model="input2" /></div>
 	   <div class="btnlogin" @click="loginbtn">登录</div>
 	</div>	
 </template>
 <script type="text/javascript">
-
 	import $ from 'jquery';
 	import Swiper from 'swiper';
 	import { Dialog,Toast } from 'vant';
@@ -43,24 +42,23 @@
 						}
 					}).then((res) => {
 						console.log(res)
-						if(res.data.code == 0){
+						if(res){
+							if(res.data.code == 0){
 							var url = that.$route.query.redirect;
 							localStorage.setItem("token",res.data.data.token);
 							this.$router.push(url || '/')
+							}
 						}
+						
 				})
 		 	}
 		 },
 		mounted:function(){
-			sessionStorage.setItem("bank",1)
-			var that = this;
-			// this.$http({
-			// 		method:'get',
-			// 		url:"/home/user/version",
-			// 		data: {}
-			// 	}).then((res) => {
-			// 		this.versions = res.data.data
-			// })
+			 var token = localStorage.getItem("token");
+			 console.log(token)
+			 if(token){
+				 this.$router.replace({name:'Index',params:{}})
+			 }
 		}
 
 	}
