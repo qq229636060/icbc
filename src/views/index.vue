@@ -32,6 +32,7 @@
 				this.nowloc = 1;
 			},
 			gotouse(){
+				var token = localStorage.getItem("token");
 				if(token){
 					this.nowloc = 2;
 				}else{
