@@ -9,6 +9,11 @@
 	   <img src="../assets/img/index.jpg" v-if="nowloc == 1" />
 	   <img src="../assets/img/use.jpg" v-if="nowloc == 2" />
 	   <img src="../assets/img/use1.jpg" v-if="nowloc == 3" />
+	   <div class="useinfoz" v-if="nowloc == 2">
+		   <div class="kh_name">*乐乐</div>
+		    <div class="kh_moblie">13489118120</div>
+			<div class="kh_lastlogin">上次登录：2018-09-09</div>
+	   </div>
 	   <div :class="nowloc == 1 ? 'foot' : 'foot1'">
 		   <div class="gotouse" @click="gotouse"></div>
 		   <div class="gotoindex" @click="gotoindex"></div>
@@ -52,9 +57,15 @@
 			index(){
 				var token = localStorage.getItem("token");
 				if(token){
-				 this.txt = "退出"
+				 this.txt = "退出";
+				  this.$http({
+						method:'post',
+						url:"/api/user"
+					}).then((res)=>{
+						console.log(res)
+					})
 				}else{
-					this.txt = "登录"
+				 this.txt = "登录"
 				}
 			}
 		 },

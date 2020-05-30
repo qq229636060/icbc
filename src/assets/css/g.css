@@ -332,4 +332,6 @@ input{ border: none;}
 .topinput1{ position: absolute; top:4rem; left: 1rem;}
 .topinput2{ position: absolute; top:4.8rem; left: 1rem;}
 .btnlogin{width: 6.9rem; height: 0.7rem; line-height: 0.7rem; text-align: center; background-color: #ed8481; color: #fff; position: absolute; top:5.7rem; left: 50%; margin-left: -3.45rem; border-radius: 0.08rem;}
-
+.kh_name{ font-size: .4rem; position: absolute; top:1.2rem; left: 1.5rem; color:#000;}
+.kh_moblie{font-size: .35rem;position: absolute; top:1.8rem; left: 1.5rem; color:#000;}
+.kh_lastlogin{ font-size: .25rem; color: #a9a9a9;position: absolute; top:2.3rem; left: 1.5rem;}

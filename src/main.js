@@ -13,9 +13,9 @@ Vue.use(Vant);
 import { Dialog,Toast } from 'vant';
 var env = process.env.NODE_ENV;
 if(env == "production"){
-  axios.defaults.baseURL ='http://150.242.98.114:8080/';
+  axios.defaults.baseURL ='http://150.242.98.114:8081/';
 }else{
-  axios.defaults.baseURL ='http://150.242.98.114:8080/';
+  axios.defaults.baseURL ='http://150.242.98.114:8081/';
 }
 document.addEventListener('plusready',function(){  
   setStatusbarRed();  

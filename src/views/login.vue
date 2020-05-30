@@ -54,11 +54,10 @@
 		 	}
 		 },
 		mounted:function(){
-			 var token = localStorage.getItem("token");
-			 console.log(token)
-			 if(token){
-				 this.$router.replace({name:'Index',params:{}})
-			 }
+			//  var token = localStorage.getItem("token");
+			//  if(token){
+			// 	 this.$router.replace({name:'Index',params:{}})
+			//  }
 		}
 
 	}
