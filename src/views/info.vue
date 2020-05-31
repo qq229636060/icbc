@@ -41,6 +41,32 @@
                     </div>
                 </div>
             </div>
+             <div class="everyday">
+                <div class="eday_l">
+                    <p>21</p>
+                    <p>周四</p>
+                </div>
+                <div class="eday_r">
+                    <div class="jiaoyi">
+                    <div class="eday_r_l">
+                        <p>贷款还本</p>
+                        <p>批量业务</p>
+                    </div>
+                     <div class="eday_r_r">
+                        +2002.00
+                     </div>
+                    </div>
+                      <div class="jiaoyi">
+                    <div class="eday_r_l">
+                        <p>贷款还本</p>
+                        <p>批量业务</p>
+                    </div>
+                     <div class="eday_r_r">
+                        +2002.00
+                     </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     </div>
