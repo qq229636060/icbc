@@ -335,3 +335,42 @@ input{ border: none;}
 .kh_name{ font-size: .4rem; position: absolute; top:1.2rem; left: 1.5rem; color:#000;}
 .kh_moblie{font-size: .35rem;position: absolute; top:1.8rem; left: 1.5rem; color:#000;}
 .kh_lastlogin{ font-size: .25rem; color: #a9a9a9;position: absolute; top:2.3rem; left: 1.5rem;}
+.zmoney{font-size: .36rem; position:absolute; top:7.7rem; right: 0.6rem; color: #333; text-align: right;}
+.other{top:11.8rem; width:7.2rem; text-align: center; right: 0;}
+.fixtop{ width: 100%; position: fixed; top:0}
+.fixtop img{ width: 100%;}
+.banklist{background-color: #f3f3f3;}
+.gotolist{ width: 1rem; height: 1rem; position: absolute; top:5rem; left: 0.5rem;}
+.listbox{ width:7rem; height:1.07rem; background: url(./../img/listone.jpg) no-repeat 0 0; background-size: 100%; margin: 0 auto 0.3rem auto; position: relative;}
+.list{margin-top: 1.3rem;}
+.list .op{ width: 7rem; height:2.5rem; background: url(./../img/listtwo.jpg) no-repeat 0 0; background-size: 100%;}
+.listbottom{ width: 100%;}
+.listbottom img{ width: 100%;}
+.card{ margin-left: 1.4rem; overflow: hidden;}
+.card p{margin: 0; color: #79888f;}
+.card p:first-child{ font-size: 0.3rem; color: #333; margin-top: 0.1rem;} 
+.yuer{ position: absolute; right: 0.6rem; top:1.3rem; font-size: 0.26rem; color: #607381;}
+.gotoinfo{ width: 1.5rem ; height: 0.6rem;position: absolute; left:0; bottom:0;}
+.goback{ width: 1rem; height: 1rem; position: absolute; left: 0; top:0;}
+.infos{background-color: #eeeeee;}
+.infoz{ position: relative;}
+.infoz img{ width: 100%; margin-top: 1rem;}
+.ztext{position: absolute;top: 1.2rem;left: 1.6rem;}
+.ztext p{margin:0;font-size: .26rem;  color: #676767;}
+.ztext p:last-child{margin-top: 0.12rem;margin-left: 1.5rem;}
+.ztext span:first-child{font-size: 0.26rem; color: #000; margin-right: 0.2rem;}
+.ztext span{color: #666;}
+.shouru{ width: 100%; position: absolute; bottom: 0.05rem; left: 2.6rem;}
+.shouru span{margin-right: 0.5rem;}
+.shouru span:first-child{color: #f6959c;}
+.shouru span:last-child{color:#59ca94}
+.month{ width: 100%; height: 0.68rem; line-height: 0.68rem; background-color: #eee; font-size: .3rem; color: #000; padding: 0 0.3rem; box-sizing: border-box;}
+.everyday{display:flex; display: -webkit-flex;background-color: #fff; padding: 0.1rem 0;}
+.eday_l{margin:0 0.3rem;}
+.eday_l p{margin: 0; text-align: center;}
+.eday_l p:first-child{font-size: 0.35rem; color: #79889e;}
+.eday_l p:last-child{font-size: .28rem; margin-top: 0.1rem;}
+.jiaoyi{display: flex; justify-content: space-between; align-items: center; width: 6.1rem; border-bottom: solid 0.01rem #eeeeee; margin-bottom: 0.2rem; padding-bottom: 0.2rem;}
+.eday_r_l p{font-size: .3rem; margin:0; color: #666;}
+.eday_r_l p:first-child{ color: #333; margin-bottom: 0.08rem;}
+.eday_r_r{font-size: 0.3rem; color: #f6959c; margin-right: 0.3rem;}

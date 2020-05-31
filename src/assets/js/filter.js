@@ -15,7 +15,7 @@ Vue.filter('formatname', function(vals) {
     console.log(vals)
     var arrys = vals.split('');
     console.log(arrys)
-    arrys[1]="*"
+    arrys[0]="*"
     return arrys.join('')
 })
 
@@ -23,10 +23,22 @@ Vue.filter('formatnumber', function(vals) {
     var arrys = vals.split('');
     console.log(arrys)
     if(arrys.length > 5){
-        arrys[2]="*"
-        arrys[3]="*"
+        arrys[3]=" *"
         arrys[4]="*"
+        arrys[5]="*"
+        arrys[6]="* "
     }
     
     return arrys.join('')
+})
+Vue.filter('formatcard', function(vals) {
+    var q = vals.substring(0,3);
+    var h = vals.substring(vals.length-4);
+    return q+'****'+h
+})
+Vue.filter('formatlast', function(vals) {
+    if(vals){
+        var h = vals.substring(vals.length-4);
+    }
+    return h
 })

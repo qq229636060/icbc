@@ -6,13 +6,16 @@
 				<img src="../assets/img/indextop.jpg"/>
 			</div>
 		</div>
+		<div class="gotolist" v-if="nowloc == 1" @click="gotolist"></div>
 	   <img src="../assets/img/index.jpg" v-if="nowloc == 1" />
 	   <img src="../assets/img/use.jpg" v-if="nowloc == 2" />
 	   <img src="../assets/img/use1.jpg" v-if="nowloc == 3" />
 	   <div class="useinfoz" v-if="nowloc == 2">
-		   <div class="kh_name">*乐乐</div>
-		    <div class="kh_moblie">13489118120</div>
-			<div class="kh_lastlogin">上次登录：2018-09-09</div>
+		   <div class="kh_name">{{userinfo.name|formatname}}</div>
+		    <div class="kh_moblie">{{userinfo.mobile|formatnumber}}</div>
+			<div class="kh_lastlogin">上次登录：{{userinfo.last}}</div>
+			<div class="zmoney">{{userinfo.money}}</div>
+			<div class="zmoney other">{{userinfo.money}}</div>
 	   </div>
 	   <div :class="nowloc == 1 ? 'foot' : 'foot1'">
 		   <div class="gotouse" @click="gotouse"></div>
@@ -24,12 +27,13 @@
 	import $ from 'jquery';
 	import Swiper from 'swiper';
 	import { Dialog,Toast } from 'vant';
-	 
+	import f from './../assets/js/filter.js'
 	export default { 
 		data(){
 			return{
 				nowloc:1,
-				txt:""
+				txt:"",
+				userinfo:""
 			}
 		},
 		 methods: {
@@ -54,6 +58,9 @@
 				}
 				
 			},
+			gotolist(){
+				this.$router.push({name:"List"})
+			},
 			index(){
 				var token = localStorage.getItem("token");
 				if(token){
@@ -62,7 +69,11 @@
 						method:'post',
 						url:"/api/user"
 					}).then((res)=>{
-						console.log(res)
+						if(res){
+							if(res.data.code == 0){
+								this.userinfo = res.data.data
+							}
+						}
 					})
 				}else{
 				 this.txt = "登录"
