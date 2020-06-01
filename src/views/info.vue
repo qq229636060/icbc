@@ -3,8 +3,9 @@
          <div class="fixtop"><img src="../assets/img/infotop.jpg"/><div class="goback" @click="goback"></div></div>
     <div class="infoz">
         <img src="../assets/img/infoz.jpg"/>
+        <div class="gotoso" @click="gotoso"></div>
         <div class="ztext">
-            <p><span>{{infoobj.title}}</span><span>尾号{{infoobj.card_no | formatlast}}</span></p>
+            <p><span>{{infoobj.title2}}</span><span>尾号{{infoobj.card_no | formatlast}}</span></p>
             <p>{{infoobj.balance}}</p>
         </div>
         <div class="shouru">
@@ -13,76 +14,51 @@
         </div>
     </div>
     <div class="infolist">
-        <div class="infobox">
-            <div class="month">2020年5月</div>
-            <div class="everyday">
+        <div class="yy" v-if="i==0" v-for="(y,key,i) in ldata" :key="key" >
+        <div class="infobox" v-for="(mouth,keys,i1) in y" :key="keys" v-if="i1==1">
+            <div class="month">{{key|format_year}}年{{keys|format_year}}月</div>
+            <div class="everyday" v-for="(day,keyday) in mouth.day" :key="keyday">
+            <div class="happday" v-for="last in day" :key="last.id">
                 <div class="eday_l">
-                    <p>21</p>
-                    <p>周四</p>
+                    <p>{{keyday|format_year}}</p>
+                    <p>{{last.week}}</p>
                 </div>
-                <div class="eday_r">
+                <div class="eday_r" >
                     <div class="jiaoyi">
                     <div class="eday_r_l">
-                        <p>贷款还本</p>
-                        <p>批量业务</p>
+                        <p>{{last.title}}</p>
+                        <p>{{last.title2}}</p>
                     </div>
-                     <div class="eday_r_r">
-                        +2002.00
-                     </div>
-                    </div>
-                      <div class="jiaoyi">
-                    <div class="eday_r_l">
-                        <p>贷款还本</p>
-                        <p>批量业务</p>
-                    </div>
-                     <div class="eday_r_r">
-                        +2002.00
+                     <div :class="parseFloat(last.money) > 0 ? 'eday_r_r':'eday_r_r grenn'">
+                        <span v-if="parseFloat(last.money) > 0">+</span>{{last.money}}
                      </div>
                     </div>
                 </div>
             </div>
-             <div class="everyday">
-                <div class="eday_l">
-                    <p>21</p>
-                    <p>周四</p>
-                </div>
-                <div class="eday_r">
-                    <div class="jiaoyi">
-                    <div class="eday_r_l">
-                        <p>贷款还本</p>
-                        <p>批量业务</p>
-                    </div>
-                     <div class="eday_r_r">
-                        +2002.00
-                     </div>
-                    </div>
-                      <div class="jiaoyi">
-                    <div class="eday_r_l">
-                        <p>贷款还本</p>
-                        <p>批量业务</p>
-                    </div>
-                     <div class="eday_r_r">
-                        +2002.00
-                     </div>
-                    </div>
-                </div>
             </div>
         </div>
+    </div>
+    <div class="infotxt"><img src="../assets/img/infotxt.jpg"/></div>
     </div>
     </div>
 </template>
 <script>
 import f from './../assets/js/filter.js'
+import { Toast } from 'vant';
 export default {
     data(){
         return{
             infodata:"",
-            infoobj:""
+            infoobj:"",
+            ldata:""
         }
     },
      methods:{
          goback(){
              this.$router.go(-1)
+         },
+         gotoso(){
+             this.$router.push({name:"So",query: { tit:this.infoobj.title3,cardno:this.infoobj.card_no}})
          },
          getdata(){
                 this.$http({
@@ -101,6 +77,12 @@ export default {
                                      this.infoobj = res.data.data.bank[i]
                                  }
                              }
+                            //  var arr = []
+                            //  for(var i in res.data.data.list){
+                            //       arr.push(res.data.data.list[i]);
+                            //       console.log(arr)
+                            //  }
+                             this.ldata = res.data.data.list
                          }
                     })
          }

@@ -301,18 +301,18 @@ input[type="password"] {
  position: absolute;
  width:100%;
  height: 100%;
- transition: all .5s;
+ transition: all .1s;
  overflow-x: hidden;
 }
 .slide-left-enter, .slide-right-leave-active {
  opacity: 0;
- -webkit-transform: translate(100%, 0);
- transform: translate(100%, 0);
+ /* -webkit-transform: translate(100%, 0);
+ transform: translate(100%, 0); */
 }
 .slide-left-leave-active, .slide-right-enter {
  opacity: 1;
- -webkit-transform: translate(-100%, 0);
- transform: translate(-100%, 0);
+ /* -webkit-transform: translate(-100%, 0);
+ transform: translate(-100%, 0); */
 }
 #indexbox{padding-bottom: 1rem;}
 #indexbox img{ width: 100%;}
@@ -337,7 +337,7 @@ input{ border: none;}
 .kh_lastlogin{ font-size: .25rem; color: #a9a9a9;position: absolute; top:2.3rem; left: 1.5rem;}
 .zmoney{font-size: .36rem; position:absolute; top:7.7rem; right: 0.6rem; color: #333; text-align: right;}
 .other{top:11.8rem; width:7.2rem; text-align: center; right: 0;}
-.fixtop{ width: 100%; position: fixed; top:0}
+.fixtop{ width: 100%; position: fixed; top:0; z-index: 999;}
 .fixtop img{ width: 100%;}
 .banklist{background-color: #f3f3f3;}
 .gotolist{ width: 1rem; height: 1rem; position: absolute; top:5rem; left: 0.5rem;}
@@ -365,15 +365,46 @@ input{ border: none;}
 .shouru span:first-child{color: #f6959c;}
 .shouru span:last-child{color:#59ca94}
 .month{ width: 100%; height: 0.68rem; line-height: 0.68rem; background-color: #eee; font-size: .3rem; color: #000; padding: 0 0.3rem; box-sizing: border-box;}
-.everyday{display:flex; display: -webkit-flex;background-color: #fff; padding: 0.1rem 0; border-bottom: solid 0.01rem #eee;}
-.everyday:last-child{border: none;}
-.eday_l{margin:0 0.3rem;}
+.everyday,.happday{display:flex; display: -webkit-flex;background-color: #fff; padding: 0.1rem 0; border-bottom: solid 0.01rem #eee;}
+.everyday:last-child,.happday:last-child{border: none;}
+.eday_l{margin:0 0.3rem; width: 0.6rem;}
 .eday_l p{margin: 0; text-align: center;}
 .eday_l p:first-child{font-size: 0.35rem; color: #79889e;}
-.eday_l p:last-child{font-size: .28rem; margin-top: 0.1rem;}
+.eday_l p:last-child{font-size: .26rem; margin-top: 0.1rem;}
 .eday_r{ width: 6.04rem;}
 .jiaoyi{display: flex; justify-content: space-between; align-items: center; width: 100%; border-bottom: solid 0.01rem #eeeeee; margin-bottom: 0.2rem; padding-bottom: 0.2rem;}
 .jiaoyi:last-child{padding: 0; margin: 0; border: none;}
-.eday_r_l p{font-size: .3rem; margin:0; color: #666;}
-.eday_r_l p:first-child{ color: #333; margin-bottom: 0.08rem;}
+.eday_r_l p{font-size: .26rem; margin:0; color: #666;}
+.eday_r_l p:first-child{ color: #333; margin-bottom: 0.12rem;}
+.eday_r_l span{color: #777; font-size: .24rem;}
 .eday_r_r{font-size: 0.3rem; color: #f6959c; margin-right: 0.3rem;}
+.grenn{ color: #59ca94;}
+.infotxt{ margin-top: 0.2rem;}
+.infotxt img{ width: 100%;}
+.gotoso{width: 1.5rem;
+    height: 0.8rem;
+    position: absolute;
+    right: 0.2rem;
+	top: 1.2rem;}
+.solist{margin-top: 1.6rem;}
+.yearname{ height: 0.75rem; background-color: #f5f7f9; color: #787878; line-height: 0.75rem; font-size: 0.26rem; color: #000; display: flex; justify-content: space-between;}
+.yearname span:first-child{margin-left: 0.3rem; margin-right: 0;}
+.ones img{ width: 100%;}
+.month_li{ width: 100%; height: 1rem; align-items: center; display: flex; border-bottom: solid 0.01rem #eee;}
+.m_iconz{ width: .22rem; height: .15rem; margin:0 0.3rem; background: url(../img/op.jpg) no-repeat 0 0; background-size: 100%;}
+.m_iconz1{ width: .22rem; height: .15rem; margin:0 0.3rem; background: url(../img/op1.jpg) no-repeat 0 0; background-size: 100%;}
+.m_month{ font-size: .32rem; color: #607483;}
+.m_shouru,.m_zhichu{ width: 2.7rem;text-align: right;font-size: .32rem; color: #59ca94;}
+.m_shouru{color: #f6959c; }
+.hide{display: none}
+.saixuan {
+    width: 1rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 2.2rem;
+}
+.tiaojian{ width:100%;  height: 10rem;position:fixed; top:1.6rem; z-index: 999; padding: 0 0 1rem 0; box-sizing: border-box;}
+.tiaojian img{ width: 100%;}
+.fixbottom{ position: absolute; bottom: 0; left: 0;}
+.po{position: relative;height:8.5rem; overflow-y:scroll;}

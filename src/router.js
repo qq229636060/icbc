@@ -4,6 +4,7 @@ import Login from './views/login.vue'
 import Index from './views/index.vue'
 import List from './views/list.vue'
 import Info from './views/info.vue'
+import So from './views/so.vue'
 Vue.use(Router) 
 export default new Router({
   mode: 'hash',
@@ -23,6 +24,11 @@ export default new Router({
       path: '/info///',
       name: 'Info',
       component:resolve => require(['./views/info.vue'], resolve)
+    },
+    {
+      path: '/so////',
+      name: 'So',
+      component:resolve => require(['./views/so.vue'], resolve)
     },
     {
       path: '/login//',

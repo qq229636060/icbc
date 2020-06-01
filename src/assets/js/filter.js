@@ -42,3 +42,11 @@ Vue.filter('formatlast', function(vals) {
     }
     return h
 })
+
+
+Vue.filter('format_year', function(vals) {
+    if(vals){
+        var h = vals.substring(1)
+    }
+    return h
+})
