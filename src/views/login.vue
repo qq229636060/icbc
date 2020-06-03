@@ -1,5 +1,6 @@
 <template>
-	<div class="main" id="login">
+	<div class="main" id="login" >
+	  <div class="goback" @click="gotoretrun"></div>
 	  <img src="../assets/img/login.jpg" class="loginimg"/>
 	   <!-- <div class="sbtop2">
 	   	 <div class="retrun" @click="gotoretrun"></div>

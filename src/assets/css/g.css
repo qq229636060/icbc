@@ -314,6 +314,7 @@ input[type="password"] {
  /* -webkit-transform: translate(-100%, 0);
  transform: translate(-100%, 0); */
 }
+#login{ background-color: #f4f5f9;}
 #indexbox{padding-bottom: 1rem;}
 #indexbox img{ width: 100%;}
 .indextop{position: fixed; top:0}
@@ -365,8 +366,8 @@ input{ border: none;}
 .shouru span:first-child{color: #f6959c;}
 .shouru span:last-child{color:#59ca94}
 .month{ width: 100%; height: 0.68rem; line-height: 0.68rem; background-color: #eee; font-size: .3rem; color: #000; padding: 0 0.3rem; box-sizing: border-box;}
-.everyday,.happday{display:flex; display: -webkit-flex;background-color: #fff; padding: 0.1rem 0; border-bottom: solid 0.01rem #eee;}
-.everyday:last-child,.happday:last-child{border: none;}
+.happday{display:flex; display: -webkit-flex;background-color: #fff; padding: 0.1rem 0; border-bottom: solid 0.01rem #eee;}
+.happday:last-child{border: none;}
 .eday_l{margin:0 0.3rem; width: 0.6rem;}
 .eday_l p{margin: 0; text-align: center;}
 .eday_l p:first-child{font-size: 0.35rem; color: #79889e;}
@@ -386,14 +387,16 @@ input{ border: none;}
     position: absolute;
     right: 0.2rem;
 	top: 1.2rem;}
+.so{ background: #eee;}
 .solist{margin-top: 1.6rem;}
 .yearname{ height: 0.75rem; background-color: #f5f7f9; color: #787878; line-height: 0.75rem; font-size: 0.26rem; color: #000; display: flex; justify-content: space-between;}
 .yearname span:first-child{margin-left: 0.3rem; margin-right: 0;}
+.ones{ width: 100%; height: .72rem; overflow: hidden;}
 .ones img{ width: 100%;}
 .month_li{ width: 100%; height: 1rem; align-items: center; display: flex; border-bottom: solid 0.01rem #eee;}
 .m_iconz{ width: .22rem; height: .15rem; margin:0 0.3rem; background: url(../img/op.jpg) no-repeat 0 0; background-size: 100%;}
 .m_iconz1{ width: .22rem; height: .15rem; margin:0 0.3rem; background: url(../img/op1.jpg) no-repeat 0 0; background-size: 100%;}
-.m_month{ font-size: .32rem; color: #607483;}
+.m_month{ font-size: .32rem; color: #607483; width: 0.8rem;}
 .m_shouru,.m_zhichu{ width: 2.7rem;text-align: right;font-size: .32rem; color: #59ca94;}
 .m_shouru{color: #f6959c; }
 .hide{display: none}
@@ -408,3 +411,31 @@ input{ border: none;}
 .tiaojian img{ width: 100%;}
 .fixbottom{ position: absolute; bottom: 0; left: 0;}
 .po{position: relative;height:8.5rem; overflow-y:scroll;}
+.bg{ width: 100%; height: 100%; background: rgba(0,0,0,0.5); position: fixed; top:0; left: 0; z-index: 998;}
+.xz {
+    width: 1.66rem;
+    height: 0.75rem;
+    position: absolute;
+    top: 5.4rem;
+	right: 0.2rem;
+	z-index: 1;
+}
+.xuanzhong{width: 1.66rem;
+    height: 0.75rem;
+    position: absolute;
+    top: 5.45rem;
+	right: 0.16rem;}
+.xuanzhong img{ width: 100%;}
+.ks_time,.end_time{ font-size: .28rem; color: #888; width: 2.25rem; height: .6rem;  position: absolute; top:6.45rem; line-height: .6rem; text-align: center;}
+.ks_time{ left: 0.33rem;}
+.end_time{ right: 0.7rem;}
+.usr_gologin{ width: 100%; height: 2rem; position: absolute; top:2rem; left: 0;}
+.gz{ width: .96rem; height: .8rem; position: absolute;     top: 0.8rem;left: 2.3rem;}
+.gzbtn{ width: .96rem; height: .8rem; position: absolute;     top: 0.8rem;left: 2.3rem; z-index: 1;}
+.monthbox{ background-color: #fff;}
+.cc{ width:100%; height: 0.62rem; line-height: 0.62rem; display: flex; background-color: #fff; }
+.cc span{margin-left:1rem}
+.c1{ color:  #f6959c;}
+.c2{ color: #59ca94;}
+.fuck{ height: 0.7rem;}
+.fuck,.fuck img{ width: 100%;}

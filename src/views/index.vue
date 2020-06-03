@@ -10,6 +10,7 @@
 	   <img src="../assets/img/index.jpg" v-if="nowloc == 1" />
 	   <img src="../assets/img/use.jpg" v-if="nowloc == 2" />
 	   <img src="../assets/img/use1.jpg" v-if="nowloc == 3" />
+	   <div class="usr_gologin" v-if="nowloc == 3"  @click="gotologin"></div>
 	   <div class="useinfoz" v-if="nowloc == 2">
 		   <div class="kh_name">{{userinfo.name|formatname}}</div>
 		    <div class="kh_moblie">{{userinfo.mobile|formatnumber}}</div>
@@ -81,6 +82,10 @@
 			}
 		 },
 		mounted:function(){
+			document.addEventListener("plusready",plusReady,false); 
+			function plusReady(){
+				plus.navigator.setStatusBarBackground("#000000");
+			} 
 			this.index() 
 		}
 
