@@ -12,24 +12,28 @@ Vue.filter('formatitme', function(val) {
 })
 
 Vue.filter('formatname', function(vals) {
-    console.log(vals)
-    var arrys = vals.split('');
-    console.log(arrys)
-    arrys[0]="*"
-    return arrys.join('')
+    if(vals != 'undefined'){
+        var arrys = (vals || '').split('');
+        arrys[0]="*"
+        return arrys.join('')
+    }
 })
 
 Vue.filter('formatnumber', function(vals) {
-    var arrys = vals.split('');
-    console.log(arrys)
-    if(arrys.length > 5){
-        arrys[3]=" *"
-        arrys[4]="*"
-        arrys[5]="*"
-        arrys[6]="* "
+    if(vals != 'undefined'){
+        var arrys = (vals || '').split('');
+        console.log(arrys)
+        if(arrys.length > 5){
+            arrys[3]=" *"
+            arrys[4]="*"
+            arrys[5]="*"
+            arrys[6]="* "
+        }
+        return arrys.join('')
     }
     
-    return arrys.join('')
+    
+    
 })
 Vue.filter('formatcard', function(vals) {
     var q = vals.substring(0,3);

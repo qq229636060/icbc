@@ -15,7 +15,7 @@
     </div>
     <div class="infolist">
         <div class="yy" v-if="i==0" v-for="(y,key,i) in ldata" :key="key" >
-        <div class="infobox" v-for="(mouth,keys,i1) in y" :key="keys" v-if="i1==1 && mouth.day.length != 0">
+        <div class="infobox" v-for="(mouth,keys,i1) in y" :key="keys" v-if="i1<2 && mouth.day.length != 0">
             <div class="month">{{key|format_year}}年{{keys|format_year}}月</div>
             <div class="everyday" v-for="(day,keyday) in mouth.day" :key="keyday">
             <div class="happday" v-for="last in day" :key="last.id">

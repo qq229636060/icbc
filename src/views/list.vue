@@ -5,8 +5,8 @@
             <div :class="index == nowindex ? 'listbox op':'listbox'" v-for="(box,index) in list" :key="box.id" @click="selectbank(index)"> 
                 <div class="card">
                     <p>{{box.title}}</p>
-                    <p v-if="index != nowindex">{{box.card_no | formatcard}}&nbsp;&nbsp;自助注册</p>
-                    <p v-if="index == nowindex">{{box.card_no}}&nbsp;&nbsp;自助注册</p>
+                    <p v-if="index != nowindex">{{box.card_no | formatcard}}&nbsp;&nbsp;{{box.title4}}</p>
+                    <p v-if="index == nowindex">{{box.card_no}}&nbsp;&nbsp;{{box.title4}}</p>
                 </div>
                 <div class="yuer" v-if="index == nowindex">{{box.balance}}</div>
                 <div class="gotoinfo" v-if="index == nowindex" @click="gotoinfos(box.id)"></div>

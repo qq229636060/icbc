@@ -7,6 +7,15 @@
 			</div>
 		</div>
 		<div class="gotolist" v-if="nowloc == 1" @click="gotolist"></div>
+		<div class="caonima" v-if="nowloc == 1 && txt == '登录'" @click="gotolist">亲爱的朋友，{{sayhi}}</div>
+		<div class="caonima" v-if="nowloc == 1 && txt == '退出'" @click="gotolist">亲爱的{{userinfo.name|formatname}}，{{sayhi}}</div>
+		<div class="caonima1" v-if="nowloc == 1">
+			<div class="day">{{d}}</div>
+			<div class="times">
+				<p>{{y}}年{{m}}月</p>
+				<p>{{ds}}</p>
+			</div>
+		</div>
 	   <img src="../assets/img/index.jpg" v-if="nowloc == 1" />
 	   <img src="../assets/img/use.jpg" v-if="nowloc == 2" />
 	   <img src="../assets/img/use1.jpg" v-if="nowloc == 3" />
@@ -34,7 +43,12 @@
 			return{
 				nowloc:1,
 				txt:"",
-				userinfo:""
+				userinfo:"",
+				y:"",
+				m:"",
+				d:"",
+				ds:"",
+				sayhi:""
 			}
 		},
 		 methods: {
@@ -79,13 +93,64 @@
 				}else{
 				 this.txt = "登录"
 				}
-			}
+			},
+			getCurrentDate() {
+						var myDate = new Date();
+						var year = myDate.getFullYear(); //年
+						var month = myDate.getMonth() + 1; //月
+						var day = myDate.getDate(); //日
+						var days = myDate.getDay();
+						var hour =  myDate.getHours() 
+						if(hour < 6){this.sayhi = "凌晨好！"} 
+						else if (hour < 9){this.sayhi="早上好！"} 
+						else if (hour < 12){this.sayhi="上午好！"} 
+						else if (hour < 14){this.sayhi="中午好！"} 
+						else if (hour < 17){this.sayhi="下午好！"} 
+						else if (hour < 19){this.sayhi="傍晚好！"} 
+						else if (hour < 22){this.sayhi="晚上好！"} 
+						else {this.sayhi="夜里好！"} 
+						switch(days) {
+								case 1:
+									days = '星期一';
+									break;
+								case 2:
+									days = '星期二';
+									break;
+								case 3:
+									days = '星期三';
+									break;
+								case 4:
+									days = '星期四';
+									break;
+								case 5:
+									days = '星期五';
+									break;
+								case 6:
+									days = '星期六';
+									break;
+								case 0:
+									days = '星期日';
+									break;
+						}
+						this.y =year;
+						this.m=month;
+						if(day<10){
+							this.d = '0'+day;	
+						}else{
+							this.d = day;
+						}
+						
+						this.ds = days
+						var str = year + "年" + month + "月" + day + "日  " + days;
+						//return str;
+					}
 		 },
 		mounted:function(){
 			document.addEventListener("plusready",plusReady,false); 
 			function plusReady(){
 				plus.navigator.setStatusBarBackground("#000000");
 			} 
+			this.getCurrentDate()
 			this.index() 
 		}
 
