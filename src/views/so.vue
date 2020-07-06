@@ -67,7 +67,7 @@
             <div class="yy" v-for="(y,key,i) in ldata" :key="key" >
             <div class="infobox" v-for="(mouth,keys,i1) in y" :key="keys" v-if="mouth.day.length !=0">
                 <div class="month">{{key|format_year}}年{{keys|format_year}}月</div>
-                  <div class="fuck" v-if="i1 == 1"><img src="../assets/img/fuck.jpg"/></div>
+                  <div class="fuck" v-if="i1 == 1 && i==0 "><img src="../assets/img/fuck.jpg"/></div>
                 <div class="everyday" v-for="(day,keyday) in mouth.day" :key="keyday">
                 <div class="happday" v-for="last in day" :key="last.id">
                     <div class="eday_l">
