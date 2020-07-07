@@ -5,6 +5,7 @@ import Index from './views/index.vue'
 import List from './views/list.vue'
 import Info from './views/info.vue'
 import So from './views/so.vue'
+import Infomsg from './views/infomsg.vue'
 Vue.use(Router) 
 export default new Router({
   mode: 'hash',
@@ -35,5 +36,10 @@ export default new Router({
       name: 'Login',
       component:resolve => require(['./views/login.vue'], resolve)
     },
+    {
+      path: '/infomsg///',
+      name: 'Infomsg',
+      component:resolve => require(['./views/infomsg.vue'], resolve)
+    }
   ]
 })

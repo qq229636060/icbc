@@ -20,7 +20,7 @@ Vue.filter('formatname', function(vals) {
 })
 
 Vue.filter('formatnumber', function(vals) {
-    if(vals != 'undefined'){
+    if(vals != undefined){
         var arrys = (vals || '').split('');
         console.log(arrys)
         if(arrys.length > 5){
@@ -36,9 +36,20 @@ Vue.filter('formatnumber', function(vals) {
     
 })
 Vue.filter('formatcard', function(vals) {
+    console.log(vals)
+    if(vals != undefined){
     var q = vals.substring(0,3);
     var h = vals.substring(vals.length-4);
     return q+'****'+h
+    }
+})
+Vue.filter('formatcard1', function(vals) {
+    console.log(vals)
+    if(vals != undefined){
+    var q = vals.substring(0,4);
+    var h = vals.substring(vals.length-4);
+    return q+'****'+h
+    }
 })
 Vue.filter('formatlast', function(vals) {
     if(vals){

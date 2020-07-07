@@ -34,7 +34,7 @@
                         <div class="m_zhichu">{{months.expend}}</div>
                     </div>
                     <div :class="op == key+keys ? 'everyday':'everyday hide'" v-for="(day,keyday) in months.day" :key="keyday">
-                    <div class="happday" v-for="last in day" :key="last.id">
+                    <div class="happday" v-for="last in day" :key="last.id" @click="gotomsg(last.id)">
                     <div class="eday_l">
                         <p>{{keyday|format_year}}</p>
                         <p>{{last.week}}</p>
@@ -69,7 +69,7 @@
                 <div class="month">{{key|format_year}}年{{keys|format_year}}月</div>
                   <div class="fuck" v-if="i1 == 1 && i==0 "><img src="../assets/img/fuck.jpg"/></div>
                 <div class="everyday" v-for="(day,keyday) in mouth.day" :key="keyday">
-                <div class="happday" v-for="last in day" :key="last.id">
+                <div class="happday" v-for="last in day" :key="last.id" @click="gotomsg(last.id)">
                     <div class="eday_l">
                         <p>{{keyday|format_year}}</p>
                         <p>{{last.week}}</p>
@@ -141,6 +141,9 @@ export default {
                 this.s = this.getMonths()[11]
                 this.e = this.getMonths()[0];
             }
+        },
+        gotomsg(e){
+            this.$router.push({name:"Infomsg" ,query: { cardid:e}})
         },
         getMonths() {
             var dataArr = [];
